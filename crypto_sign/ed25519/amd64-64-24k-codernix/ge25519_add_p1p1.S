@@ -317,7 +317,7 @@ mov  %r9,%r12
 # asm 2: mov  <a3=%rax,>b3=%r13
 mov  %rax,%r13
 
-# qhasm:   carry? a0 -= *(uint64 *)(pp + 0)
+# qhasm:   carry? a0 -= *(uint64 *)(pp + 0) 
 # asm 1: subq 0(<pp=int64#2),<a0=int64#3
 # asm 2: subq 0(<pp=%rsi),<a0=%rdx
 subq 0(%rsi),%rdx
@@ -382,7 +382,7 @@ cmovc %r15,%r14
 # asm 2: sub  <subt0=%r14,<a0=%rdx
 sub  %r14,%rdx
 
-# qhasm:   carry? b0 += *(uint64 *)(pp + 0)
+# qhasm:   carry? b0 += *(uint64 *)(pp + 0) 
 # asm 1: addq 0(<pp=int64#2),<b0=int64#8
 # asm 2: addq 0(<pp=%rsi),<b0=%r10
 addq 0(%rsi),%r10
@@ -527,7 +527,7 @@ mov  %r9,%r12
 # asm 2: mov  <t13=%rax,>t23=%r13
 mov  %rax,%r13
 
-# qhasm:   carry? t10 -= *(uint64 *) (qp + 0)
+# qhasm:   carry? t10 -= *(uint64 *) (qp + 0) 
 # asm 1: subq 0(<qp=int64#4),<t10=int64#3
 # asm 2: subq 0(<qp=%rcx),<t10=%rdx
 subq 0(%rcx),%rdx
@@ -592,7 +592,7 @@ cmovc %r15,%r14
 # asm 2: sub  <subt0=%r14,<t10=%rdx
 sub  %r14,%rdx
 
-# qhasm:   carry? t20 += *(uint64 *) (qp + 0)
+# qhasm:   carry? t20 += *(uint64 *) (qp + 0) 
 # asm 1: addq 0(<qp=int64#4),<t20=int64#8
 # asm 2: addq 0(<qp=%rcx),<t20=%r10
 addq 0(%rcx),%r10
@@ -887,7 +887,7 @@ movq 136(%rsp),%rax
 # asm 2: mul  <mulx1=%r12
 mul  %r12
 
-# qhasm:   carry? a3 += mulrax
+# qhasm:   carry? a3 += mulrax 
 # asm 1: add  <mulrax=int64#7,<a3=int64#14
 # asm 2: add  <mulrax=%rax,<a3=%rbx
 add  %rax,%rbx
@@ -1207,7 +1207,7 @@ adc %rdx,%r11
 # asm 2: mov  <mulr4=%r8,>mulrax=%rax
 mov  %r8,%rax
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   mulr4 = mulrax
@@ -1225,7 +1225,7 @@ mov  %r9,%rax
 # asm 2: mov  <mulrdx=%rdx,>mulr5=%r9
 mov  %rdx,%r9
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr5 += mulrax
@@ -1248,7 +1248,7 @@ mov  $0,%r10
 # asm 2: adc <mulrdx=%rdx,<mulr6=%r10
 adc %rdx,%r10
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr6 += mulrax
@@ -1271,7 +1271,7 @@ mov  $0,%r11
 # asm 2: adc <mulrdx=%rdx,<mulr7=%r11
 adc %rdx,%r11
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr7 += mulrax
@@ -1569,7 +1569,7 @@ movq 168(%rsp),%rax
 # asm 2: mul  <mulx1=%r12
 mul  %r12
 
-# qhasm:   carry? rx3 += mulrax
+# qhasm:   carry? rx3 += mulrax 
 # asm 1: add  <mulrax=int64#7,<rx3=int64#14
 # asm 2: add  <mulrax=%rax,<rx3=%rbx
 add  %rax,%rbx
@@ -1889,7 +1889,7 @@ adc %rdx,%r11
 # asm 2: mov  <mulr4=%r8,>mulrax=%rax
 mov  %r8,%rax
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   mulr4 = mulrax
@@ -1907,7 +1907,7 @@ mov  %r9,%rax
 # asm 2: mov  <mulrdx=%rdx,>mulr5=%r9
 mov  %rdx,%r9
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr5 += mulrax
@@ -1930,7 +1930,7 @@ mov  $0,%r10
 # asm 2: adc <mulrdx=%rdx,<mulr6=%r10
 adc %rdx,%r10
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr6 += mulrax
@@ -1953,7 +1953,7 @@ mov  $0,%r11
 # asm 2: adc <mulrdx=%rdx,<mulr7=%r11
 adc %rdx,%r11
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr7 += mulrax
@@ -2061,7 +2061,7 @@ mov  %r15,%r9
 # asm 2: mov  <rx3=%rbx,>ry3=%rax
 mov  %rbx,%rax
 
-# qhasm:   carry? ry0 += a0_stack
+# qhasm:   carry? ry0 += a0_stack 
 # asm 1: addq <a0_stack=stack64#8,<ry0=int64#3
 # asm 2: addq <a0_stack=56(%rsp),<ry0=%rdx
 addq 56(%rsp),%rdx
@@ -2126,7 +2126,7 @@ cmovc %r11,%r10
 # asm 2: add  <addt0=%r10,<ry0=%rdx
 add  %r10,%rdx
 
-# qhasm:   carry? rx0 -= a0_stack
+# qhasm:   carry? rx0 -= a0_stack 
 # asm 1: subq <a0_stack=stack64#8,<rx0=int64#11
 # asm 2: subq <a0_stack=56(%rsp),<rx0=%r13
 subq 56(%rsp),%r13
@@ -2421,7 +2421,7 @@ movq   112(%rcx),%rax
 # asm 2: mul  <mulx1=%r12
 mul  %r12
 
-# qhasm:   carry? c3 += mulrax
+# qhasm:   carry? c3 += mulrax 
 # asm 1: add  <mulrax=int64#7,<c3=int64#14
 # asm 2: add  <mulrax=%rax,<c3=%rbx
 add  %rax,%rbx
@@ -2741,7 +2741,7 @@ adc %rdx,%r11
 # asm 2: mov  <mulr4=%r8,>mulrax=%rax
 mov  %r8,%rax
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   mulr4 = mulrax
@@ -2759,7 +2759,7 @@ mov  %r9,%rax
 # asm 2: mov  <mulrdx=%rdx,>mulr5=%r9
 mov  %rdx,%r9
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr5 += mulrax
@@ -2782,7 +2782,7 @@ mov  $0,%r10
 # asm 2: adc <mulrdx=%rdx,<mulr6=%r10
 adc %rdx,%r10
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr6 += mulrax
@@ -2805,7 +2805,7 @@ mov  $0,%r11
 # asm 2: adc <mulrdx=%rdx,<mulr7=%r11
 adc %rdx,%r11
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr7 += mulrax
@@ -2938,9 +2938,9 @@ mov  $0,%r11
 # asm 2: movq <c0_stack=56(%rsp),>mulx0=%r12
 movq 56(%rsp),%r12
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D0)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx0
@@ -2958,9 +2958,9 @@ mov  %rax,%r13
 # asm 2: mov  <mulrdx=%rdx,>c1=%r14
 mov  %rdx,%r14
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D1)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx0
@@ -2983,9 +2983,9 @@ mov  $0,%r15
 # asm 2: adc <mulrdx=%rdx,<c2=%r15
 adc %rdx,%r15
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D2)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx0
@@ -3008,9 +3008,9 @@ mov  $0,%rbx
 # asm 2: adc <mulrdx=%rdx,<c3=%rbx
 adc %rdx,%rbx
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D3)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx0
@@ -3033,9 +3033,9 @@ adc %rdx,%r8
 # asm 2: movq <c1_stack=64(%rsp),>mulx1=%r12
 movq 64(%rsp),%r12
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D0)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx1
@@ -3058,9 +3058,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D1)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx1
@@ -3093,9 +3093,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D2)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx1
@@ -3103,7 +3103,7 @@ movq CRYPTO_NAMESPACE(EC2D2)(%rip),%rax
 # asm 2: mul  <mulx1=%r12
 mul  %r12
 
-# qhasm:   carry? c3 += mulrax
+# qhasm:   carry? c3 += mulrax 
 # asm 1: add  <mulrax=int64#7,<c3=int64#14
 # asm 2: add  <mulrax=%rax,<c3=%rbx
 add  %rax,%rbx
@@ -3128,9 +3128,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D3)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx1
@@ -3163,9 +3163,9 @@ adc %rdx,%r9
 # asm 2: movq <c2_stack=72(%rsp),>mulx2=%r12
 movq 72(%rsp),%r12
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D0)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx2
@@ -3188,9 +3188,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D1)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx2
@@ -3223,9 +3223,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D2)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx2
@@ -3258,9 +3258,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D3)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx2
@@ -3293,9 +3293,9 @@ adc %rdx,%r10
 # asm 2: movq <c3_stack=80(%rsp),>mulx3=%r12
 movq 80(%rsp),%r12
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D0),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D0)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D0)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D0)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx3
@@ -3318,9 +3318,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D1),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D1)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D1)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D1)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx3
@@ -3353,9 +3353,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D2),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D2)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D2)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D2)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx3
@@ -3388,9 +3388,9 @@ mov  $0,%rbp
 # asm 2: adc <mulrdx=%rdx,<mulc=%rbp
 adc %rdx,%rbp
 
-# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)
-# asm 1: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=int64#7
-# asm 2: movq CRYPTO_NAMESPACE(EC2D3),>mulrax=%rax
+# qhasm:   mulrax = *(uint64 *)&CRYPTO_NAMESPACE(EC2D3)(%rip)
+# asm 1: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=int64#7
+# asm 2: movq CRYPTO_NAMESPACE(EC2D3)(%rip)(%rip),>mulrax=%rax
 movq CRYPTO_NAMESPACE(EC2D3)(%rip),%rax
 
 # qhasm:   (uint128) mulrdx mulrax = mulrax * mulx3
@@ -3423,7 +3423,7 @@ adc %rdx,%r11
 # asm 2: mov  <mulr4=%r8,>mulrax=%rax
 mov  %r8,%rax
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   mulr4 = mulrax
@@ -3441,7 +3441,7 @@ mov  %r9,%rax
 # asm 2: mov  <mulrdx=%rdx,>mulr5=%r9
 mov  %rdx,%r9
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr5 += mulrax
@@ -3464,7 +3464,7 @@ mov  $0,%r10
 # asm 2: adc <mulrdx=%rdx,<mulr6=%r10
 adc %rdx,%r10
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr6 += mulrax
@@ -3487,7 +3487,7 @@ mov  $0,%r11
 # asm 2: adc <mulrdx=%rdx,<mulr7=%r11
 adc %rdx,%r11
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr7 += mulrax
@@ -3785,7 +3785,7 @@ movq   80(%rcx),%rax
 # asm 2: mul  <mulx1=%r12
 mul  %r12
 
-# qhasm:   carry? rt3 += mulrax
+# qhasm:   carry? rt3 += mulrax 
 # asm 1: add  <mulrax=int64#7,<rt3=int64#14
 # asm 2: add  <mulrax=%rax,<rt3=%rbx
 add  %rax,%rbx
@@ -4105,7 +4105,7 @@ adc %rdx,%r11
 # asm 2: mov  <mulr4=%r8,>mulrax=%rax
 mov  %r8,%rax
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   mulr4 = mulrax
@@ -4123,7 +4123,7 @@ mov  %r9,%rax
 # asm 2: mov  <mulrdx=%rdx,>mulr5=%rcx
 mov  %rdx,%rcx
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr5 += mulrax
@@ -4146,7 +4146,7 @@ mov  $0,%r8
 # asm 2: adc <mulrdx=%rdx,<mulr6=%r8
 adc %rdx,%r8
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr6 += mulrax
@@ -4169,7 +4169,7 @@ mov  $0,%r9
 # asm 2: adc <mulrdx=%rdx,<mulr7=%r9
 adc %rdx,%r9
 
-# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)
+# qhasm:   (uint128) mulrdx mulrax = mulrax * *(uint64 *)&CRYPTO_NAMESPACE(38)(%rip)
 mulq CRYPTO_NAMESPACE(38)(%rip)
 
 # qhasm:   carry? mulr7 += mulrax
@@ -4257,7 +4257,7 @@ imulq  $38,%rsi,%rsi
 # asm 2: add  <mulzero=%rsi,<rt0=%r13
 add  %rsi,%r13
 
-# qhasm:   carry? rt0 += rt0
+# qhasm:   carry? rt0 += rt0 
 # asm 1: add  <rt0=int64#11,<rt0=int64#11
 # asm 2: add  <rt0=%r13,<rt0=%r13
 add  %r13,%r13
@@ -4342,7 +4342,7 @@ mov  %r15,%rcx
 # asm 2: mov  <rt3=%rbx,>rz3=%r8
 mov  %rbx,%r8
 
-# qhasm:   carry? rz0 += c0_stack
+# qhasm:   carry? rz0 += c0_stack 
 # asm 1: addq <c0_stack=stack64#8,<rz0=int64#2
 # asm 2: addq <c0_stack=56(%rsp),<rz0=%rsi
 addq 56(%rsp),%rsi
@@ -4407,7 +4407,7 @@ cmovc %rax,%r9
 # asm 2: add  <addt0=%r9,<rz0=%rsi
 add  %r9,%rsi
 
-# qhasm:   carry? rt0 -= c0_stack
+# qhasm:   carry? rt0 -= c0_stack 
 # asm 1: subq <c0_stack=stack64#8,<rt0=int64#11
 # asm 2: subq <c0_stack=56(%rsp),<rt0=%r13
 subq 56(%rsp),%r13
