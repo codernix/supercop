@@ -31,7 +31,7 @@ movq   %r9,16(%rdi)
 movq   %rsi,24(%rdi)
 add %r11,%rsp
 mov %rdi,%rax
-mov %rsi,%rx
+mov %rsi,%rdx
 ret
 
 .type _CRYPTO_NAMESPACE(fe25519_sub), @function
